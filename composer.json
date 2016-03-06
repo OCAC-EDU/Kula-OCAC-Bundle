@@ -3,17 +3,13 @@
   "description" : "Bundle for OCAC modifications to Kula SIS",
   "type" : "symfony-bundle",
   "authors" : [{
-      "name" : "Makoa Jacobsen",
-      "email" : "mjacobsen@ocac.edu"
+    "name" : "Makoa Jacobsen",
+    "email" : "mjacobsen@ocac.edu"
   }],
-  "require" : {
-  },
   "autoload" : {
-      "psr-0" : {
-          "OCAC\\OCACBundle" : ""
-      }
+    "psr-0" : {
+      "OCAC\\OCACBundle" : ""
+    }
   },
-  "target-dir" : "OCAC/OCACBundle",
-  "repositories" : [{
-  }]
+  "target-dir" : "OCAC/OCACBundle"
 }
