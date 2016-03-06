@@ -1,0 +1,3 @@
+ocac_course_catalog:
+  pattern: ocac/course_catalog/{org}/{term}
+  defaults: { _controller: OCACBundle:CourseCatalog:index }
