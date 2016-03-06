@@ -7,9 +7,8 @@
     "email" : "mjacobsen@ocac.edu"
   }],
   "autoload" : {
-    "psr-0" : {
-      "OCAC\\OCACBundle" : ""
+    "psr-4" : {
+      "OCACBundle" : ""
     }
-  },
-  "target-dir" : "OCAC/OCACBundle"
+  }
 }
