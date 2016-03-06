@@ -1,5 +1,5 @@
 {
-  "name" : "OCAC/OCACBundle",
+  "name" : "ocac-edu/kula-ocac-bundle",
   "description" : "Bundle for OCAC modifications to Kula SIS",
   "type" : "symfony-bundle",
   "authors" : [{
