@@ -8,6 +8,8 @@ class CourseCatalogController extends Controller {
   
   public function indexAction($org, $term) {
     
+    $last = $this->request->get('last');
+    
     $data = array(); $i = 0; $j = 0; $last_section_id = null;
     
     $result = $this->db()->db_select('STUD_SECTION', 'sec')
@@ -27,6 +29,9 @@ class CourseCatalogController extends Controller {
       ->condition('org.ORGANIZATION_ABBREVIATION', $org)
       ->condition('term.TERM_ABBREVIATION', $term)
       ->condition('sec.STATUS', null);
+    if ($last) $result = $result->condition($this->db()->db_or()
+      ->condition('sec.CREATED_TIMESTAMP', date('Y-m-d', $last), '>=')
+      ->condition('sec.UPDATED_TIMESTAMP', date('Y-m-d', $last), '>=')); 
     $result = $result->execute();
     while ($row = $result->fetch()) {
       
