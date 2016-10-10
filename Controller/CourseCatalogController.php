@@ -2,12 +2,13 @@
 
 namespace OCACBundle\Controller;
 
-use Kula\Core\Bundle\FrameworkBundle\Controller\Controller;
+use Kula\Core\Bundle\FrameworkBundle\Controller\APIController;
 
-class CourseCatalogController extends Controller {
+class CourseCatalogController extends APIController {
   
   public function indexAction($org, $term) {
-    
+    $this->authorize();
+
     $last = $this->request->get('last');
     
     $data = array(); $i = 0; $j = 0; $last_section_id = null;

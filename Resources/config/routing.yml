@@ -1,3 +1,3 @@
 ocac_course_catalog:
-  pattern: ocac/course_catalog/{org}/{term}
+  path: api/v1/{org}/{term}/courses
   defaults: { _controller: OCACBundle:CourseCatalog:index }
