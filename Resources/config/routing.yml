@@ -1,3 +1,11 @@
 ocac_course_catalog:
   path: api/v1/{org}/{term}/courses
   defaults: { _controller: OCACBundle:CourseCatalog:index }
+
+ocac_course_list:
+  path: api/v1/{org}/{term}/course
+  defaults: { _controller: OCACBundle:CourseCatalog:index }
+
+ocac_course:
+  path: api/v1/{org}/{term}/course/{section_id}
+  defaults: { _controller: OCACBundle:CourseCatalog:course }
