@@ -9,3 +9,23 @@ ocac_course_list:
 ocac_course:
   path: api/v1/{org}/{term}/course/{section_id}
   defaults: { _controller: OCACBundle:CourseCatalog:course }
+
+ocac_add_class:
+    path:     api/v1/student/{student_id}/classes/add/{section_id}
+    defaults: { _controller: OCACBundle:Scheduling:addClass }
+    methods: [POST]
+
+ocac_delete_class:
+    path:     api/v1/student/{student_id}/classes/{class_id}
+    defaults: { _controller: OCACBundle:Scheduling:removeClass }
+    methods: [DELETE]
+
+ocac_classes:
+    path:     api/v1/student/{student_id}/classes
+    defaults: { _controller: OCACBundle:Scheduling:getClasses }
+    methods: [GET]
+
+ocac_classes_org_term:
+    path:     api/v1/student/{student_id}/classes/{org}/{term}
+    defaults: { _controller: OCACBundle:Scheduling:getClasses }
+    methods: [GET]
