@@ -29,3 +29,13 @@ ocac_classes_org_term:
     path:     api/v1/student/{student_id}/classes/{org}/{term}
     defaults: { _controller: OCACBundle:Scheduling:getClasses }
     methods: [GET]
+
+ocac_user_children:
+    path:     api/v1/user/current/children
+    defaults: { _controller: OCACBundle:User:getChildren }
+    methods: [GET]
+
+ocac_user_children_add:
+    path:     api/v1/user/current/children/add
+    defaults: { _controller: OCACBundle:User:addChild }
+    methods: [POST]
