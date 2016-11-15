@@ -18,4 +18,8 @@ class SchedulingController extends APIController {
      return $this->symfonyForward('KulaHEdSchedulingBundle:APIv1Schedule:getClasses', array('student_id' => $student_id, 'org' => $org, 'term' => $term));
   }
 
+  public function getPendingClassesAction() {
+  	return $this->symfonyForward('KulaHEdSchedulingBundle:APIv1Schedule:getPendingClasses');
+  }
+
 }

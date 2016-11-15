@@ -30,6 +30,11 @@ ocac_classes_org_term:
     defaults: { _controller: OCACBundle:Scheduling:getClasses }
     methods: [GET]
 
+ocac_classes_pending:
+    path:     api/v1/student/current/classes/pending
+    defaults: { _controller: OCACBundle:Scheduling:getPendingClasses }
+    methods: [GET]
+
 ocac_user_children:
     path:     api/v1/user/current/children
     defaults: { _controller: OCACBundle:User:getChildren }
